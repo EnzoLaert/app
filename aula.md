@@ -22,3 +22,29 @@ Controle de fluxo (if/else)
 Coletar os Dados
 Processar os dados (manipular, alterar ...)
 Apresentar os dados
+
+# Tipos de dados:
+
+Strings (texto): ...
+Numbers: 2 1.4
+Functions
+
+# Operadores
+
+
+Operadores de atribuição de valor
+Operador de contatenação
+
+
+### Estruturas de dados
+
+
+#### Arrays:
+
+Uma lista que contém qualquer tipo de dado
+
+#### Objetos:
+
+Atributos e métodos
+Criação e manipulação de objetos
+Acesso a propriedades de objetos 
