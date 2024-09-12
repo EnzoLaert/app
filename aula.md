@@ -8,7 +8,7 @@ Como un lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 # Peças de una linguagen
 
-Comentários
+[x] Comentários
 Declaração de variáveis (const, let)
 Operadores (atribuição, concatenação, matemáticos, lógicos)
 -Tipos de dados (string, number, boolean)
