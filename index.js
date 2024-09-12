@@ -1,4 +1,5 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
+const { default: BodyReadable } = require('undici-types/readable')
 
 let meta = {
     value: 'Tomar 3L de água por dia',
@@ -21,6 +22,23 @@ const cadastrarMeta = async () => {
      )
 
 }
+
+const metasRealizadas = async () => {
+    const realizadas = metas.filter((meta) => {
+        return meta.checked
+    })
+
+    if(realizadas.length == 0) {
+        console.log('Não existem metas realizadas!  :(')
+        return
+    }
+
+    await select({
+        message: "Metas Realizadas",
+        choices: [...realizadas]
+    })
+}
+
 const listarMetas = async () => {
     const respostas = await checkbox ({
         message: "Use as setas para mudar de meta, o espaço para marcar ou desmarcar e o enter para finalizar essa etapa",
@@ -64,6 +82,10 @@ const start = async () => {
               value: "listar"
             },
             {
+                  name: "Metas realizadas",
+                value: "realizadas"
+            },
+            {
                 name: "Sair",
                 value: "sair"
             }
@@ -78,6 +100,9 @@ const start = async () => {
                 break
             case "listar":
                 await listarMetas()
+                break
+            case "realizadas":
+                await metasRealizadas()
                 break
             case "sair":
                 console.log("até a próxima!")
