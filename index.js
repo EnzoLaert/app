@@ -126,6 +126,8 @@ const mostrarMensagem = () => {
     }
 }
 
+
+
 const start = async () => {
    await carregarMetas()
 
