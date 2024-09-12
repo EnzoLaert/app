@@ -1,5 +1,4 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
-const { default: BodyReadable } = require('undici-types/readable')
 
 let meta = {
     value: 'Tomar 3L de água por dia',
